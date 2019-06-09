@@ -46,10 +46,7 @@ const App = () => {
     );
   }, []);
   const handleRemove = useCallback(id => {
-    const { todos } = this.state;
-    setTodos({
-      todos: todos.filter(todo => todo.id !== id)
-    });
+    setTodos(todos => todos.filter(todo => todo.id !== id));
   }, []);
 
   return (
